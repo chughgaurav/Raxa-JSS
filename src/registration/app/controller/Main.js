@@ -55,7 +55,6 @@ Ext.define('RaxaEmr.Registration.controller.Main', {
     },
 
     init: function () {
-        console.log('Main controller init');
         this.initializePatientStore();
         this.printPatientStore();
 
@@ -70,7 +69,6 @@ Ext.define('RaxaEmr.Registration.controller.Main', {
     },
 
     initializePatientStore: function () {
-        console.log('initializePatientStore');
         //our Store automatically picks up the LocalStorageProxy defined on the
         //Patient model
         patientStore = Ext.create('Ext.data.Store', {
@@ -79,18 +77,10 @@ Ext.define('RaxaEmr.Registration.controller.Main', {
     },
 
     addPatientToStore: function () {
-        console.log("add patient to patientStore");
-
         var form = this.getCreatePatientForm();
         var values = form.getValues();
-
-        console.log("form values:");
-        console.log(values);
         patientStore.add(values);
         patientStore.sync();
-
-        console.log("patient object:");
-        console.log(patientStore.last());
     },
 
     printPatientStore: function () {
@@ -107,7 +97,6 @@ Ext.define('RaxaEmr.Registration.controller.Main', {
      * Takes input from Registration Form and creates a patient in LocalStorage
      */
     createPatient: function () {
-        console.log("createPatient");
         this.addPatientToStore();
     },
 

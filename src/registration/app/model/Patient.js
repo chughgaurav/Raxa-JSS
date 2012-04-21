@@ -31,13 +31,14 @@ Ext.define('RaxaEmr.Registration.model.Patient', {
 		},
 		{
 			name: 'dateOfBirth',
-			type: 'date'
+			type: 'date',
+			dateFormat:'m/d/Y'
 		},
-		{
+		/*{
             // TODO: remove age? Shouldnt need age and dateOfBirth
             name: 'age',    
 			type: 'int'
-		},
+		},*/
 		{
 			name: 'education',
 			type: 'string'
@@ -45,11 +46,43 @@ Ext.define('RaxaEmr.Registration.model.Patient', {
 		{
 			name: 'caste',
 			type: 'string'
+		},
+		{
+			name: 'block#',
+			type: 'string'
+		},
+		{
+			name: 'street',
+			type: 'string'
+		},
+		{
+			name: 'town',
+			type: 'string'
+		},
+		{
+			name: 'postOffice',
+			type: 'string'
+		},
+		{
+			name: 'tehsil',
+			type: 'string'
+		},
+		{
+			name: 'district',
+			type: 'string'
+		},
+		{
+			name: 'contactViaPhone',
+			type: 'string'
+		},
+		{
+			name: 'primaryPhone',
+			type: 'string'
+		},
+		{
+			name: 'secondaryPhone',
+			type: 'string'
 		}
-		//{
-		//	name: 'occupation',
-		//	type: 'string'
-		//}
     ]
 	}
 });
